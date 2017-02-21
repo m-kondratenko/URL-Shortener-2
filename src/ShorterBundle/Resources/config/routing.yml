@@ -1,0 +1,19 @@
+shorter_homepage:
+    path:     /
+    defaults: { _controller: ShorterBundle:Main:index }
+    requirements:
+      _method: GET
+
+shorter_output:
+    path:     /
+    defaults: { _controller: ShorterBundle:Shorten:index }
+    requirements:
+      _method: POST
+
+shorter_redirect:
+    path:     /{url}
+    defaults: { _controller: ShorterBundle:Redirect:index }
+
+shorter_API:
+    path:     /api/get
+    defaults: { _controller: ShorterBundle:API:index }

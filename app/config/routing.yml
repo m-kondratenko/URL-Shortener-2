@@ -1,0 +1,3 @@
+shorter:
+    resource: "@ShorterBundle/Resources/config/routing.yml"
+    prefix:   /

@@ -1,0 +1,162 @@
+<?php
+
+namespace ShorterBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Urls
+ *
+ * @ORM\Table(name="urls")
+ * @ORM\Entity(repositoryClass="ShorterBundle\Repository\UrlsRepository")
+ */
+class Urls
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="longurl", type="string", length=255)
+     */
+    private $longurl;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shorturl", type="string", length=255)
+     */
+    private $shorturl;
+
+    /**
+     * @var datetime
+     *
+     * @ORM\Column(name="date", type="datetime", length=0)
+     */
+    private $date;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usage", type="decimal", length=10)
+     */
+    private $usage;
+
+    /**
+     * constructor
+     */
+    public function __construct()
+    {
+      $this->date = new \DateTime();
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set longurl
+     *
+     * @param string $longurl
+     * @return Urls
+     */
+    public function setLongurl($longurl)
+    {
+        $this->longurl = $longurl;
+
+        return $this;
+    }
+
+    /**
+     * Get longurl
+     *
+     * @return string
+     */
+    public function getLongurl()
+    {
+        return $this->longurl;
+    }
+
+    /**
+     * Set shorturl
+     *
+     * @param string $shorturl
+     * @return Urls
+     */
+    public function setShorturl($shorturl)
+    {
+        $this->shorturl = $shorturl;
+
+        return $this;
+    }
+
+    /**
+     * Get shorturl
+     *
+     * @return string
+     */
+    public function getShorturl()
+    {
+        return $this->shorturl;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \datetime $date
+     * @return Urls
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \datetime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set usage
+     *
+     * @param string $usage
+     * @return Urls
+     */
+    public function setUsage($usage)
+    {
+        $this->usage = $usage;
+
+        return $this;
+    }
+
+    /**
+     * Get usage
+     *
+     * @return string
+     */
+    public function getUsage()
+    {
+        return $this->usage;
+    }
+}

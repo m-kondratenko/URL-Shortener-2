@@ -1,0 +1,48 @@
+body {
+  background-color:#fff;
+  color:#378;
+  font-family:SEGOE PRINT,Arial,sans-serif;
+  font-size:1em;
+  line-height:100%;
+}
+h1 {
+  font-weight:400;
+  font-size:2.4em;
+  color:#339;
+  font-family:Comic Sans MS,sans-serif;
+  margin-left:10%;
+  margin-right:10%;
+  text-align: center
+}
+.button, .input, .text {
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+  border-radius:5px;
+  border:2px solid silver;
+  color:#24273E;
+  margin-bottom:10px;
+  font-size:1.2em;
+  text-align: center
+}
+#longurl {
+  font-size:0.8em;
+}
+.smalltext {
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+  font-size:1em;
+  text-align: center
+}
+.button:focus, .input:focus {
+  border:2px solid #002C5A
+}
+.button:hover {
+  border:2px solid #288AB8;
+  cursor:pointer
+}
+.input:hover:hover{
+  border:2px solid #288AB8;
+  cursor:text
+}
